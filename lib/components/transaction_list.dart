@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors_in_immutables
 import 'package:flutter/material.dart';
 import '../models/transaction.dart';
 import 'package:intl/intl.dart';
@@ -53,6 +52,9 @@ class TransactionList extends StatelessWidget {
                         child: FittedBox(
                           child: Text(
                             'R\$${tr.value}',
+                            style: const TextStyle(
+                              color: Color.fromARGB(255, 241, 247, 250),
+                            ),
                           ),
                         ),
                       ),
