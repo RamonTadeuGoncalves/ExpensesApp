@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class TransactionFom extends StatefulWidget {
-  final void Function(String, double) onSubmit;
+  final void Function(String, double, DateTime) onSubmit;
 
   const TransactionFom(this.onSubmit, {Key? key}) : super(key: key);
 
@@ -13,16 +13,16 @@ class TransactionFom extends StatefulWidget {
 class _TransactionFomState extends State<TransactionFom> {
   final _titleController = TextEditingController();
   final _valueController = TextEditingController();
-  DateTime? _selectedDate;
+  DateTime _selectedDate = DateTime.now();
 
   _submitForm() {
     final title = _titleController.text;
     final value = double.tryParse(_valueController.text) ?? 0.0;
 
-    if (title.isEmpty || value <= 0) {
+    if (title.isEmpty || value <= 0 || _selectedDate == null) {
       return;
     }
-    widget.onSubmit(title, value);
+    widget.onSubmit(title, value, _selectedDate);
   }
 
   _showDatePicker() {
@@ -68,7 +68,7 @@ class _TransactionFomState extends State<TransactionFom> {
                     child: Text(
                       _selectedDate == null
                           ? 'Nenhuma data selecionada!'
-                          : 'Data selecionada: ${DateFormat('dd/MM/y').format(_selectedDate!)}',
+                          : 'Data selecionada: ${DateFormat('dd/MM/y').format(_selectedDate)}',
                     ),
                   ),
                   TextButton(
