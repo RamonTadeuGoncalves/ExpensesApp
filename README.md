@@ -19,7 +19,7 @@
    
 <p>
    O projeto DESPESAS PESSOAIS está sendo desenvolvido com base nas aulas do curso de Flutter da Cod3r. <br>
-   Despesasa Pessoais se trata de um app mobile feito em Flutter para Gerenciar os gastos semanais, onde é possível fazer o lançamentos de todos os gastos, coloando o nome, o valor e data da despesa. Com isso o gráfico presente na parte superior da tela principal vai sendo preenchido conforme os valores vão sendo inseridos. <br>
+   Despesas Pessoais se trata de um app mobile feito em Flutter para gerenciar os gastos semanais, onde é possível fazer o lançamento de todos os gastos, colocando o nome, o valor e data da respectiva despesa. Com isso, o gráfico presente na parte superior da tela principal vai sendo preenchido com o percentual do valor gasto no respectivo dia em relação ao valor gasto na semana. <br>
 </p>
 
 ---
@@ -59,7 +59,7 @@ $ flutter run
 <p>
    Fazer login social e integração com banco de dados. <br>
    Cadastro de boletos e contas por meio da câmera do celular. <br>
-   Notificações sempre que o mês for fechar e/ou algum boleto estiver para vencer. <br>
+   Notificar o usuário sempre que o mês estiver para fechar e/ou algum boleto estiver para vencer. <br>
 </p>
 
 <br>
